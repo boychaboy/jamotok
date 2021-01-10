@@ -20,8 +20,8 @@ parser.add_argument(
     help="Path to the output directory, where the files will be saved",
 )
 parser.add_argument("--name", default="bert-wordpiece", type=str, help="The name of the output vocab files")
-parser.add_argument("--vocab_size", default=31000, type=int, help="Vocab size")
-parser.add_argument("--char", default=4000, type=int, help="Number of character in vocab")
+parser.add_argument("--vocab_size", default=32000, type=int, help="Vocab size")
+parser.add_argument("--char", default=2000, type=int, help="Number of character in vocab")
 
 args = parser.parse_args()
 
