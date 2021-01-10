@@ -3,14 +3,14 @@ import multiprocessing
 import os
 import time
 
-from mecab_tokenizer import MecabTokenizer
+from jamo_tokenizer import JamoTokenizer
 
 def pretokenize(job_id: int, args: argparse.Namespace):
     def log(*args):
         msg = " ".join(map(str, args))
         print("Job {}:".format(job_id), msg)
 
-    tokenizer = MecabTokenizer()  # one tokenizer for one process
+    tokenizer = JamoTokenizer()  # one tokenizer for one process
 
     log("Pretokenize corpus!")
     fnames = sorted(os.listdir(args.input_dir))
