@@ -1,12 +1,10 @@
-# Effective Korean Tokenizer
+# Korean Jamo Tokenizer
 
-Effective method for building Korean Tokenizer
+Korean Tokenizer using Consonents & Vowels to do BERT wordpiece tokenizing. 
 
 ## Requirements
 
-`NOTE`: Before the installation, check if [mecab-ko-dic](https://bitbucket.org/eunjeon/mecab-ko-dic/src/master/) is already configured.
-
-```bash
+```
 $ pip3 install -r requirements.txt
 ```
 
@@ -21,10 +19,10 @@ $ mkdir corpus
 $ split -a 4 -l {$NUM_LINES_PER_FILE} -d {$CORPUS_FILE} ./corpus/data_
 ```
 
-3. Pretokenize corpus with Mecab
+3. Pretokenize corpus with Jamo Tokenizer
 
 ```bash
-$ python3 src/mecab_pretokenize.py --input_dir corpus --output_dir pretokenized_corpus --num_processes 16
+$ python3 src/jamo_pretokenize.py --input_dir corpus --output_dir pretokenized_corpus --num_processes 16
 ```
 
 4. Train Wordpiece
